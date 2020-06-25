@@ -35,6 +35,7 @@ export default function FormPropsTextFields() {
       <TextField
         id="outlined-message"
         label="Message"
+        type="text"
         helperText="How can I help?"
         variant="outlined"
       />

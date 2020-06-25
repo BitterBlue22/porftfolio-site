@@ -1,13 +1,14 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import "./App.css";
-import VerticalTabs from "./components/re-useable/NavBar";
+
+import PersistentDrawerLeft from "./components/re-useable/Navigation";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <VerticalTabs />
+      <PersistentDrawerLeft />
     </>
   );
 }
