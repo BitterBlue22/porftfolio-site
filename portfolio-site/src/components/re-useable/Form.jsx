@@ -7,7 +7,8 @@ const StyledTextField = styled(TextField)({
   background: "white",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+
+  boxShadow: "0 3px 5px 2px #004c4c",
   color: "white",
   margin: "1ch",
   width: "100%",
@@ -15,16 +16,16 @@ const StyledTextField = styled(TextField)({
 });
 
 const StyledButton = styled(Button)({
-  background: "#566b54",
+  background: "#66b2b2",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #333a36",
+  boxShadow: "0 3px 5px 2px #004c4c",
   color: "white",
   height: 48,
   padding: "0 30px",
   margin: "10px",
   "&:hover": {
-    background: "#333a36",
+    background: "	#008080",
   },
 });
 

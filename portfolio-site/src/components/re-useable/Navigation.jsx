@@ -19,8 +19,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+
 import { Router, Link } from "@reach/router";
 import Home from "../Home";
 import AboutMe from "../AboutMe";
@@ -32,17 +31,18 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    backgroundColor: "#170d24",
+    backgroundColor: "#ffffff",
     width: "100%",
     height: "100%",
     position: "fixed",
+    overflow: "scroll",
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: "#333a36",
+    backgroundColor: "#004c4c",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -65,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "#566b54",
+
+    border: "none",
+    backgroundColor: "#bb9b49 ",
   },
   drawerHeader: {
     display: "flex",

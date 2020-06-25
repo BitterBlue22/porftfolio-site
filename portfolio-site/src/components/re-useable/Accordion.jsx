@@ -7,26 +7,26 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const StyledExpansionPanel = styled(ExpansionPanel)({
-  background: "#566b54",
+  background: "#008080",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #333a36",
+  boxShadow: "0 3px 5px 2px #004c4c",
   color: "white",
   padding: "0 30px",
   width: "100%",
 });
 const StyledExpansionPanelDetails = styled(ExpansionPanelDetails)({
-  background: "#9bb6b8",
+  background: "radial-gradient(#ffffff, #b2d8d8	)",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #333a36",
-  color: "white",
+
+  color: "#004c4c",
   padding: "20px",
   width: "100%",
   margin: "0 0 20px",
 });
 const StyledExpansionPanelSummary = styled(ExpansionPanelSummary)({
-  background: "##566b54",
+  background: "#66b2b2",
   border: 0,
   borderRadius: 3,
 
