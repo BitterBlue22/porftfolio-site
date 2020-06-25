@@ -20,14 +20,14 @@ export default function SimpleExpansionPanel() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <section className={classes.root}>
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Expansion Panel 1</Typography>
+          <Typography className={classes.heading}>Project Latest</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -42,26 +42,24 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>Expansion Panel 2</Typography>
+          <Typography className={classes.heading}>Chicken Tinder</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          <Typography>A fun way to choose where to eat!</Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel disabled>
+      <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
+          aria-controls="panel2a-content"
+          id="panel2a-header"
         >
-          <Typography className={classes.heading}>
-            Disabled Expansion Panel
-          </Typography>
+          <Typography className={classes.heading}>NC News</Typography>
         </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>A Reddit-inspired news site</Typography>
+        </ExpansionPanelDetails>
       </ExpansionPanel>
-    </div>
+    </section>
   );
 }
