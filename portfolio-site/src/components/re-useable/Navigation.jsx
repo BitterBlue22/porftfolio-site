@@ -19,7 +19,6 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
 import { Router, Link } from "@reach/router";
 import Home from "../Home";
 import AboutMe from "../AboutMe";
@@ -73,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
   },
@@ -127,8 +125,8 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Menu
+          <Typography variant="h2" noWrap>
+            <h2>Menu</h2>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -157,7 +155,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Home" />
+              <ListItemText primary="Home" className="list-item-text" />
             </ListItem>
           </Link>
           <Link to="projects" className="link">
@@ -165,7 +163,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <AppsIcon />
               </ListItemIcon>
-              <ListItemText primary="Projects" />
+              <ListItemText primary="Projects" className="list-item-text" />
             </ListItem>
           </Link>
           <Link to="about-me" className="link">
@@ -173,7 +171,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
-              <ListItemText primary="About Me" />
+              <ListItemText primary="About Me" className="list-item-text" />
             </ListItem>
           </Link>
           <Link to="contact-me" className="link">
@@ -181,21 +179,10 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <ContactSupportIcon />
               </ListItemIcon>
-              <ListItemText primary="Contact Me" />
+              <ListItemText primary="Contact Me" className="list-item-text" />
             </ListItem>
           </Link>
         </List>
-        {/* <Divider />
-        <List>
-          {["Blog", "Art", "Social Media"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
       </Drawer>
       <main
         className={clsx(classes.content, {
