@@ -6,7 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
+
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -30,7 +30,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#FFFFFF",
     width: "100%",
     height: "100%",
     position: "fixed",
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: "#004c4c",
+    backgroundColor: "#49274A",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
 
     border: "none",
-    backgroundColor: "#bb9b49 ",
+    backgroundColor: "#94618E",
   },
   drawerHeader: {
     display: "flex",
@@ -125,9 +125,8 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h2" noWrap>
-            <h2>Menu</h2>
-          </Typography>
+
+          <h2>Menu</h2>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -139,7 +138,7 @@ export default function PersistentDrawerLeft() {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader}>
+        <header className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
@@ -147,7 +146,7 @@ export default function PersistentDrawerLeft() {
               <ChevronRightIcon />
             )}
           </IconButton>
-        </div>
+        </header>
         <Divider />
         <List>
           <Link to="Home" className="link">
@@ -155,7 +154,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Home" className="list-item-text" />
+              <ListItemText primary="Home" />
             </ListItem>
           </Link>
           <Link to="projects" className="link">
@@ -163,7 +162,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <AppsIcon />
               </ListItemIcon>
-              <ListItemText primary="Projects" className="list-item-text" />
+              <ListItemText primary="Projects" />
             </ListItem>
           </Link>
           <Link to="about-me" className="link">
@@ -171,7 +170,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
-              <ListItemText primary="About Me" className="list-item-text" />
+              <ListItemText primary="About Me" />
             </ListItem>
           </Link>
           <Link to="contact-me" className="link">
@@ -179,7 +178,7 @@ export default function PersistentDrawerLeft() {
               <ListItemIcon>
                 <ContactSupportIcon />
               </ListItemIcon>
-              <ListItemText primary="Contact Me" className="list-item-text" />
+              <ListItemText primary="Contact Me" />
             </ListItem>
           </Link>
         </List>

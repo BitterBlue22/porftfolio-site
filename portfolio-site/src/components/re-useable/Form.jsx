@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import TextField from "@material-ui/core/TextField";
 import { styled } from "@material-ui/core/styles";
 import { Button, Grid } from "@material-ui/core";
 
 const StyledTextField = styled(TextField)({
   background: "white",
-  border: 0,
-  borderRadius: 3,
 
-  boxShadow: "0 3px 5px 2px #004c4c",
+  borderRadius: "3px",
+
+  boxShadow: "0 3px 5px 2px #49274A",
   color: "white",
   margin: "1ch",
   width: "100%",
@@ -16,16 +16,18 @@ const StyledTextField = styled(TextField)({
 });
 
 const StyledButton = styled(Button)({
-  background: "#66b2b2",
+  background: "#94618E",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #004c4c",
+  boxShadow: "0 3px 5px 2px #49274A",
   color: "white",
   height: 48,
   padding: "0 30px",
   margin: "10px",
   "&:hover": {
-    background: "	#008080",
+    background: "	#49274A",
+    borderRadius: 3,
+    boxShadow: "0 3px 5px 2px #94618E",
   },
 });
 
