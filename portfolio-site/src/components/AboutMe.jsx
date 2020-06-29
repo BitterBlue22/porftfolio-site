@@ -12,7 +12,16 @@ const StyledBox = styled(Box)({
 
 const StyledPaper = styled(Paper)({
   margin: "2%",
-  boxShadow: "0 3px 5px 2px #008080",
+  padding: "2%",
+  boxShadow: "0 3px 5px 2px #49274A",
+  backgroundColor: "#94618E",
+  maxWidth: "80%",
+});
+
+const StyledTypography = styled(Typography)({
+  fontFamily: "Work Sans",
+  fontSize: "large",
+  textAlign: "justify",
 });
 
 const AboutMe = () => {
@@ -20,20 +29,19 @@ const AboutMe = () => {
     <section className="page">
       <StyledPaper elevation={3} variant="elevation">
         <StyledBox>
-          <h2>A little about me</h2>
-          <Typography paragraph>
-            Hi! I’m Telisa. I am a curious individual interested in technology
-            and software solutions.
-          </Typography>
-          <Typography paragraph>
+          <h2>Hi! I'm Telisa.</h2>
+
+          <StyledTypography></StyledTypography>
+          <h2>How did I get into web development?</h2>
+          <StyledTypography paragraph>
             Though always fascinated by technology, I was headed into a career
             in law. I spent a lot of time during my studies and training
             thinking of how the legal system could be made more efficient with
             the right kinds of software. After doing vacation work at a company
             developing exactly such kinds of software, I realised that software
             development was the future. My future.
-          </Typography>
-          <Typography paragraph>
+          </StyledTypography>
+          <StyledTypography paragraph>
             With my LLB done, I worked in law temporarily whilst I explored the
             options for a way into software development. My opportunities in
             South Africa were very limited, and with my parents emigrating to
@@ -42,7 +50,14 @@ const AboutMe = () => {
             upon Northcoders. A few days later I started my precourse material
             and I was hooked. A global pandemic later, I graduated a full-stack
             developer capable of making my endless array of ideas a reality!
-          </Typography>
+          </StyledTypography>
+
+          <h2>Interests outside of coding...</h2>
+          <StyledTypography paragraph>
+            I love to explore nature, so outdoor activities such as hiking,
+            caving and scrambling are favourites. Furthermore, I enjoy playing
+            computer games and creating digital art.
+          </StyledTypography>
         </StyledBox>
       </StyledPaper>
     </section>
