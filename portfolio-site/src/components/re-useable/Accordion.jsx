@@ -5,35 +5,36 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Grid } from "@material-ui/core";
 
 const StyledExpansionPanel = styled(ExpansionPanel)({
-  background: "#008080",
+  background: "#94618E",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #004c4c",
+  boxShadow: "0 3px 5px 2px #49274A",
   color: "white",
-  padding: "0 30px",
+  padding: "0",
   width: "100%",
 });
 const StyledExpansionPanelDetails = styled(ExpansionPanelDetails)({
-  background: "radial-gradient(#ffffff, #b2d8d8	)",
+  backgroundColor: "#FFFFFF",
   border: 0,
   borderRadius: 3,
 
   color: "#004c4c",
   padding: "20px",
   width: "100%",
-  margin: "0 0 20px",
 });
 const StyledExpansionPanelSummary = styled(ExpansionPanelSummary)({
-  background: "#66b2b2",
   border: 0,
   borderRadius: 3,
-
-  color: "white",
   padding: "0 30px",
+  color: "white",
   width: "100%",
+});
+const StyledTypography = styled(Typography)({
+  fontFamily: "Work Sans",
+  fontSize: "large",
+  textAlign: "justify",
 });
 
 export default function StyledComponents() {
@@ -45,10 +46,10 @@ export default function StyledComponents() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>VisuCarta</Typography>
+          <h2>VisuCarta</h2>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
-          <Typography>Book cover recognition app</Typography>
+          <Typography>Book cover recognition app - in progress!</Typography>
         </StyledExpansionPanelDetails>
       </StyledExpansionPanel>
       <StyledExpansionPanel>
@@ -57,59 +58,49 @@ export default function StyledComponents() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Chicken Tinder</Typography>
+          <h2>Chicken Tinder</h2>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
-          <Typography>
-            <span>
-              Ever have a hard time deciding where to go for dinner? Try Chicken
-              Tinder, a fun way to choose where to eat!
-            </span>
-            <Grid>
-              {/* <img
-                src="https://www.hihi.co.uk/wp-content/themes/hihi/img/hihi-connect/mobile/screen-1.png"
-                alt="mobile screen"
-              /> */}
-            </Grid>
-            <Grid>
-              <section>
-                <h4>Frontend:</h4>
-                <a href=" https://chicken-tinder-nc.netlify.app/  ">Hosted</a>
-                <br />
-                <a href="https://github.com/hayeskg/ChickenTinderFrontend  ">
-                  Github
-                </a>
-                <h6>Tech stack:</h6>
-                <ul>
-                  <li>JavaScript</li>
-                  <li>HTML5/CSS3</li>
-                  <li>React</li>
-                  <li>GraphQL (and Apollo)</li>
-                  <li>MaterialUI</li>
-                  <li>Firebase Authentication</li>
-                </ul>
-              </section>
-              <section>
-                <h4>Backend:</h4>
-                <a href="https://chicken-tinder-backend.herokuapp.com/graphql">
-                  Hosted
-                </a>
-                <br />
-                <a href="https://github.com/hayeskg/ChickenTinderBackend">
-                  Github
-                </a>
-                <h6>Tech stack:</h6>
-                <ul>
-                  <li>JavaScript</li>
-                  <li>MongoDB Atlas (and mongoose)</li>
-                  <li>Express</li>
-                  <li>GraphQL</li>
-                  <li>Axios</li>
-                  <li>Jest</li>
-                </ul>
-              </section>
-            </Grid>
-          </Typography>
+          <StyledTypography>
+            Ever have a hard time deciding where to go for dinner? Try Chicken
+            Tinder, a fun way to choose where to eat!
+            <section>
+              <h4>Frontend:</h4>
+              <a href=" https://chicken-tinder-nc.netlify.app/  ">Hosted</a>
+              <br />
+              <a href="https://github.com/hayeskg/ChickenTinderFrontend  ">
+                Github
+              </a>
+              <h6>Tech stack:</h6>
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML5/CSS3</li>
+                <li>React</li>
+                <li>GraphQL (and Apollo)</li>
+                <li>MaterialUI</li>
+                <li>Firebase Authentication</li>
+              </ul>
+            </section>
+            <section>
+              <h4>Backend:</h4>
+              <a href="https://chicken-tinder-backend.herokuapp.com/graphql">
+                Hosted
+              </a>
+              <br />
+              <a href="https://github.com/hayeskg/ChickenTinderBackend">
+                Github
+              </a>
+              <h6>Tech stack:</h6>
+              <ul>
+                <li>JavaScript</li>
+                <li>MongoDB Atlas (and mongoose)</li>
+                <li>Express</li>
+                <li>GraphQL</li>
+                <li>Axios</li>
+                <li>Jest</li>
+              </ul>
+            </section>
+          </StyledTypography>
         </StyledExpansionPanelDetails>
       </StyledExpansionPanel>
       <StyledExpansionPanel>
@@ -118,10 +109,10 @@ export default function StyledComponents() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>NC News</Typography>
+          <h2>NC news</h2>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
-          <Typography>
+          <StyledTypography>
             A Reddit-inspired news site
             <section>
               <h4>Frontend:</h4>
@@ -152,7 +143,7 @@ export default function StyledComponents() {
                 <li>Jest</li>
               </ul>
             </section>
-          </Typography>
+          </StyledTypography>
         </StyledExpansionPanelDetails>
       </StyledExpansionPanel>
     </section>
