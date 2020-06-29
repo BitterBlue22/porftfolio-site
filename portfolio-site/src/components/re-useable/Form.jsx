@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { styled } from "@material-ui/core/styles";
 import { Button, Grid } from "@material-ui/core";
@@ -39,13 +39,14 @@ const StyledGrid = styled(Grid)({
 export default function StyledComponents() {
   return (
     <StyledGrid container spacing={1}>
-      <form noValidate autoComplete="off">
+      <form autoComplete="off" name="contact" data-netlify="true">
         <StyledGrid container item>
           <StyledTextField
             required
             id="outlined-required"
             label="Name"
             variant="outlined"
+            name="name"
             fullWidth
           />
         </StyledGrid>
@@ -56,6 +57,7 @@ export default function StyledComponents() {
             label="Email"
             type="email"
             variant="outlined"
+            name="email"
             fullWidth
           />
         </StyledGrid>
@@ -66,12 +68,13 @@ export default function StyledComponents() {
             type="text"
             variant="outlined"
             multiline
+            name="message"
             rows={4}
             fullWidth
           />
         </StyledGrid>
         <StyledGrid container item xs={12} spacing={1}>
-          <StyledButton variant="contained" color="primary">
+          <StyledButton variant="contained" color="primary" type="submit">
             Submit
           </StyledButton>
         </StyledGrid>
