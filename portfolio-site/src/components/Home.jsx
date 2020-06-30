@@ -1,24 +1,16 @@
 import React from "react";
-import { Box, styled } from "@material-ui/core";
+import { Box, styled, Button } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
-const StyledBox = styled(Box)({
-  backgroundImage:
-    "url('https://files.123freevectors.com/wp-content/original/131184-abstract-cool-purple-polygonal-triangle-background.jpg')",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center center",
-  backgroundSize: "cover",
-  backgroundAttachment: "sticky",
-  height: "100%",
-  width: "100%",
-  position: "fixed",
-
-  margin: "0px",
-  padding: "0px",
-});
+const StyledButton = styled(Button)({});
 const Home = () => {
   return (
-    <section className="page">
-      <StyledBox />
+    <section className="home">
+      <h2>Welcome!</h2>
+      <h3>
+        Site currently under construction, but feel free to have a look around.
+      </h3>
     </section>
   );
 };
