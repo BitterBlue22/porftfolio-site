@@ -1,6 +1,46 @@
 body {
   margin: 0;
 }
+.menu-links {
+  padding: 20px;
+}
+.github {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.github:hover {
+  color: #94618e;
+}
+.linkedin {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.linkedin:hover {
+  color: #94618e;
+}
+
+.menu-icon {
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.menu-icon:hover {
+  color: #94618e;
+}
+
+.nav-links {
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.nav-links:hover {
+  color: white;
+}
 .link {
   text-decoration: none;
   color: black;
@@ -10,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 h2 {

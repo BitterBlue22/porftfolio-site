@@ -6,13 +6,14 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
-
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
 import AppsIcon from "@material-ui/icons/Apps";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
@@ -64,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-
     border: "none",
     backgroundColor: "#94618E",
   },
@@ -115,7 +115,7 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+        <Toolbar className="toolbar">
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -123,10 +123,20 @@ export default function PersistentDrawerLeft() {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />
+            <MenuIcon className="menu-icon" />
           </IconButton>
 
-          <h2>Menu</h2>
+          <section className="menu-links">
+            <a href="https://github.com/BitterBlue22" className="github">
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/telisa-du-plessis-7b1284150/"
+              className="linkedin"
+            >
+              <LinkedInIcon />
+            </a>
+          </section>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -139,7 +149,7 @@ export default function PersistentDrawerLeft() {
         }}
       >
         <header className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={handleDrawerClose} className="nav-links">
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
@@ -149,8 +159,8 @@ export default function PersistentDrawerLeft() {
         </header>
         <Divider />
         <List>
-          <Link to="Home" className="link">
-            <ListItem button key="Home">
+          <Link to="Home" className="link ">
+            <ListItem button key="Home" className="nav-links">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -158,7 +168,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
           <Link to="projects" className="link">
-            <ListItem button key="projects">
+            <ListItem button key="projects" className="nav-links">
               <ListItemIcon>
                 <AppsIcon />
               </ListItemIcon>
@@ -166,7 +176,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
           <Link to="about-me" className="link">
-            <ListItem button key="about-me">
+            <ListItem button key="about-me" className="nav-links">
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
@@ -174,7 +184,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
           <Link to="contact-me" className="link">
-            <ListItem button key="contact-me">
+            <ListItem button key="contact-me" className="nav-links">
               <ListItemIcon>
                 <ContactSupportIcon />
               </ListItemIcon>
