@@ -7,12 +7,11 @@ const StyledBox = styled(Box)({
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center",
   backgroundSize: "cover",
-  backgroundAttachment: "fixed",
+  backgroundAttachment: "sticky",
   height: "100%",
   width: "100%",
   position: "fixed",
-  textAlign: "center",
-  alignItems: "center",
+
   margin: "0px",
   padding: "0px",
 });
