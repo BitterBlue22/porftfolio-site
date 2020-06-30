@@ -47,6 +47,7 @@ const StyledButton = styled(Button)({
   height: 48,
   padding: "0 30px",
   margin: "10px",
+  transition: "all 150ms ease-in-out",
   "&:active": {
     background: "	#49274A",
     borderRadius: 3,
