@@ -21,7 +21,7 @@ const StyledPaper = styled(Paper)({
 const StyledTypography = styled(Typography)({
   fontFamily: "Work Sans",
   fontSize: "large",
-  textAlign: "justify",
+  textAlign: "center",
 });
 
 const AboutMe = () => {
@@ -30,8 +30,11 @@ const AboutMe = () => {
       <StyledPaper elevation={3} variant="elevation">
         <StyledBox>
           <h2>Hi! I'm Telisa.</h2>
-
-          <StyledTypography></StyledTypography>
+          <StyledTypography>
+            I'm a full-stack JavaScript developer, passionate about tech and
+            software solutions. Please check out some of my projects listed on
+            the site, or have a gander at my gitHub or Linkdin.
+          </StyledTypography>
           <h2>How did I get into web development?</h2>
           <StyledTypography paragraph>
             Though always fascinated by technology, I was headed into a career
