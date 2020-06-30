@@ -1,9 +1,25 @@
 import React from "react";
+import { Box, styled } from "@material-ui/core";
 
+const StyledBox = styled(Box)({
+  backgroundImage:
+    "url('https://files.123freevectors.com/wp-content/original/131184-abstract-cool-purple-polygonal-triangle-background.jpg')",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center center",
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed",
+  height: "100%",
+  width: "100%",
+  position: "fixed",
+  textAlign: "center",
+  alignItems: "center",
+  margin: "0px",
+  padding: "0px",
+});
 const Home = () => {
   return (
     <section className="page">
-      <h2>Welcome!</h2>
+      <StyledBox />
     </section>
   );
 };
