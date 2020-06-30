@@ -47,6 +47,11 @@ const StyledButton = styled(Button)({
   height: 48,
   padding: "0 30px",
   margin: "10px",
+  "&:active": {
+    background: "	#49274A",
+    borderRadius: 3,
+    boxShadow: "0 3px 5px 2px #94618E",
+  },
   "&:hover": {
     background: "	#49274A",
     borderRadius: 3,

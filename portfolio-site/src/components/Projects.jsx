@@ -5,9 +5,7 @@ const Projects = () => {
   return (
     <section className="page">
       <h2>Coding projects</h2>
-      <h3>
-        <a href="https://github.com/BitterBlue22">GITHUB</a>
-      </h3>
+
       <SimpleExpansionPanel />
     </section>
   );
