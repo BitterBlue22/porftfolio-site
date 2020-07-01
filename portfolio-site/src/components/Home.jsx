@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, styled, Button } from "@material-ui/core";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { styled, Button } from "@material-ui/core";
 
 const StyledButton = styled(Button)({});
 const Home = () => {
