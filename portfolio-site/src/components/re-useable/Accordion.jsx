@@ -157,7 +157,7 @@ export default function StyledComponents() {
               </StyledButton>
             </a>
             <a
-              href="https://github.com/BitterBlue22/NC-news-FE "
+              href="https://github.com/BitterBlue22/Read-all-about-it-fe"
               className="link"
             >
               <StyledButton>
@@ -179,7 +179,10 @@ export default function StyledComponents() {
                 <span>Hosted</span>
               </StyledButton>
             </a>
-            <a href="https://github.com/BitterBlue22/NC_News" className="link">
+            <a
+              href="https://github.com/BitterBlue22/Read-all-about-it-be"
+              className="link"
+            >
               <StyledButton>
                 <span>GitHub</span>
               </StyledButton>
