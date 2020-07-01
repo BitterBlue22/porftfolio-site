@@ -69,10 +69,60 @@ export default function StyledComponents() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <h2>VisuCarta</h2>
+          <h2>Bookmark</h2>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
-          <Typography>Book cover recognition app - in progress!</Typography>
+          <StyledTypography>
+            *In progress*
+            <h4>Frontend:</h4>
+            {/* <a href="" className="link">
+              <StyledButton>
+                <span>Hosted</span>
+              </StyledButton>
+            </a> */}
+            <a
+              href="https://github.com/p-stanescu/Bookmark-FE"
+              className="link"
+            >
+              <StyledButton>
+                <span>GitHub</span>
+              </StyledButton>
+            </a>
+            <h5>Tech stack:</h5>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML5/CSS3</li>
+              <li>React</li>
+              <li>GraphQL (and Apollo)</li>
+              <li>MaterialUI</li>
+            </ul>
+            <h4>Backend:</h4>
+            {/* <a
+              href=""
+              className="link"
+            >
+              <StyledButton>
+                <span>Hosted</span>
+              </StyledButton>
+            </a> */}
+            <a
+              href="https://github.com/BitterBlue22/bookmark-be"
+              className="link"
+            >
+              <StyledButton>
+                <span>GitHub</span>
+              </StyledButton>
+            </a>
+            <h5>Tech stack:</h5>
+            <ul>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>Lighthouse</li>
+              <li>GraphQL</li>
+              <li>Firestore</li>
+              <li>Firebase</li>
+            </ul>
+          </StyledTypography>
         </StyledExpansionPanelDetails>
       </StyledExpansionPanel>
       <StyledExpansionPanel>
@@ -131,6 +181,7 @@ export default function StyledComponents() {
             <ul>
               <li>JavaScript</li>
               <li>MongoDB Atlas (and mongoose)</li>
+              <li>Node.js</li>
               <li>Express</li>
               <li>GraphQL</li>
               <li>Axios</li>
@@ -145,11 +196,11 @@ export default function StyledComponents() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <h2>NC news</h2>
+          <h2>Read all about it!</h2>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
           <StyledTypography>
-            A Reddit-inspired news site
+            A Reddit-inspired news site.
             <h4>Frontend:</h4>
             <a href="https://tel-nc-news.netlify.app/ " className="link">
               <StyledButton>
@@ -169,7 +220,7 @@ export default function StyledComponents() {
               <li>JavaScript</li>
               <li>HTML5/CSS3</li>
               <li>React</li>
-              <li>@reach/router</li>
+              <li>Reach Router</li>
               <li>Styled Components</li>
               <li>Axios</li>
             </ul>
@@ -190,6 +241,7 @@ export default function StyledComponents() {
             <h5>Tech stack:</h5>
             <ul>
               <li>JavaScript</li>
+              <li>Node.js</li>
               <li>Express</li>
               <li>PostgreSQL</li>
               <li>Knex.js</li>
