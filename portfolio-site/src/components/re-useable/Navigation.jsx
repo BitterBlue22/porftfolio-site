@@ -194,14 +194,14 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="About Me" />
             </ListItem>
           </Link>
-          <Link to="contact-me" className="link">
+          {/* <Link to="contact-me" className="link">
             <ListItem button key="contact-me" className="nav-links">
               <ListItemIcon>
                 <ContactSupportIcon />
               </ListItemIcon>
               <ListItemText primary="Contact Me" />
             </ListItem>
-          </Link>
+          </Link> */}
         </List>
       </Drawer>
       <main
@@ -215,7 +215,7 @@ export default function PersistentDrawerLeft() {
           <Home path="/Home" />
           <Projects path="/projects" />
           <AboutMe path="/about-me" />
-          <ContactMe path="/contact-me" />
+          {/* <ContactMe path="/contact-me" /> */}
           <Art path="/art" />
         </Router>
       </main>
