@@ -1,10 +1,6 @@
 import React from "react";
-import { Grid, styled } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import ImgMediaCardArt from "./re-useable/ArtCards";
-
-const StyledGrid = styled(Grid)({
-  maxHeight: "50%",
-});
 
 const Art = () => {
   const links = {
@@ -26,8 +22,7 @@ const Art = () => {
       "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/BowDress1.jpg?raw=true",
   };
   return (
-    <section className="page">
-      <h2>Art</h2>
+    <section>
       <Grid
         container
         justify="space-around"

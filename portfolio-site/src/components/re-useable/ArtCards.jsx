@@ -1,11 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
-import { Link } from "@reach/router";
+import { Card, CardActionArea, CardMedia } from "@material-ui/core";
 import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,10 +12,6 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "100%",
     maxWidth: "100%",
   },
-  content: { backgroundColor: "#263037" },
-  button: { backgroundColor: "#313e47" },
-  title: { color: "whitesmoke", fontSize: "x-large" },
-  text: { color: "whitesmoke" },
   expand: {
     maxWidth: "50%",
     backgroundColor: "#313e47",
@@ -42,6 +33,7 @@ export default function ImgMediaCardArt({ img }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
   return (
     <Card
       className={classes.root}
