@@ -14,7 +14,7 @@ const StyledPaper = styled(Paper)({
   margin: "2%",
   padding: "2%",
   boxShadow: "0 3px 5px 2px #49274A",
-  backgroundColor: "#94618E",
+  backgroundColor: "whitesmoke",
   maxWidth: "80%",
 });
 
@@ -33,7 +33,7 @@ const AboutMe = () => {
           <StyledTypography>
             I'm a full-stack JavaScript developer, passionate about tech and
             software solutions. Please check out some of my projects listed on
-            the site, or have a gander at my gitHub or Linkdin.
+            the site, or have a gander at my gitHub or Linkedin.
           </StyledTypography>
           <h2>How did I get into web development?</h2>
           <StyledTypography paragraph>
