@@ -10,10 +10,10 @@ import {
 } from "@material-ui/core";
 
 const StyledExpansionPanel = styled(ExpansionPanel)({
-  background: "#94618E",
+  background: "	#2b373f",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #49274A",
+  boxShadow: "0 3px 5px 2px #36454f",
   color: "white",
   padding: "0",
   width: "100%",
@@ -39,7 +39,7 @@ const StyledTypography = styled(Typography)({
   textAlign: "justify",
 });
 const StyledButton = styled(Button)({
-  background: "#94618E",
+  background: "#36454f",
   border: 0,
   borderRadius: 3,
   boxShadow: "0 3px 5px 2px #49274A",
@@ -51,80 +51,18 @@ const StyledButton = styled(Button)({
   "&:active": {
     background: "	#49274A",
     borderRadius: 3,
-    boxShadow: "0 3px 5px 2px #94618E",
+    boxShadow: "0 3px 5px 2px 	#0b0e10",
   },
   "&:hover": {
     background: "	#49274A",
     borderRadius: 3,
-    boxShadow: "0 3px 5px 2px #94618E",
+    boxShadow: "0 3px 5px 2px 	#0b0e10",
   },
 });
 
 export default function StyledComponents() {
   return (
     <section>
-      <StyledExpansionPanel>
-        <StyledExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <h2>Bookmark</h2>
-        </StyledExpansionPanelSummary>
-        <StyledExpansionPanelDetails>
-          <StyledTypography>
-            *In progress*
-            <h4>Frontend:</h4>
-            {/* <a href="" className="link">
-              <StyledButton>
-                <span>Hosted</span>
-              </StyledButton>
-            </a> */}
-            <a
-              href="https://github.com/p-stanescu/Bookmark-FE"
-              className="link"
-            >
-              <StyledButton>
-                <span>GitHub</span>
-              </StyledButton>
-            </a>
-            <h5>Tech stack:</h5>
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML5/CSS3</li>
-              <li>React</li>
-              <li>GraphQL (and Apollo)</li>
-              <li>MaterialUI</li>
-            </ul>
-            <h4>Backend:</h4>
-            {/* <a
-              href=""
-              className="link"
-            >
-              <StyledButton>
-                <span>Hosted</span>
-              </StyledButton>
-            </a> */}
-            <a
-              href="https://github.com/BitterBlue22/bookmark-be"
-              className="link"
-            >
-              <StyledButton>
-                <span>GitHub</span>
-              </StyledButton>
-            </a>
-            <h5>Tech stack:</h5>
-            <ul>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>Lighthouse</li>
-              <li>GraphQL</li>
-              <li>Firestore</li>
-              <li>Firebase</li>
-            </ul>
-          </StyledTypography>
-        </StyledExpansionPanelDetails>
-      </StyledExpansionPanel>
       <StyledExpansionPanel>
         <StyledExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
@@ -246,6 +184,68 @@ export default function StyledComponents() {
               <li>PostgreSQL</li>
               <li>Knex.js</li>
               <li>Jest</li>
+            </ul>
+          </StyledTypography>
+        </StyledExpansionPanelDetails>
+      </StyledExpansionPanel>
+      <StyledExpansionPanel>
+        <StyledExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <h2>Bookmark</h2>
+        </StyledExpansionPanelSummary>
+        <StyledExpansionPanelDetails>
+          <StyledTypography>
+            *In progress*
+            <h4>Frontend:</h4>
+            {/* <a href="" className="link">
+              <StyledButton>
+                <span>Hosted</span>
+              </StyledButton>
+            </a> */}
+            <a
+              href="https://github.com/p-stanescu/Bookmark-FE"
+              className="link"
+            >
+              <StyledButton>
+                <span>GitHub</span>
+              </StyledButton>
+            </a>
+            <h5>Tech stack:</h5>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML5/CSS3</li>
+              <li>React</li>
+              <li>GraphQL (and Apollo)</li>
+              <li>MaterialUI</li>
+            </ul>
+            <h4>Backend:</h4>
+            {/* <a
+              href=""
+              className="link"
+            >
+              <StyledButton>
+                <span>Hosted</span>
+              </StyledButton>
+            </a> */}
+            <a
+              href="https://github.com/BitterBlue22/bookmark-be"
+              className="link"
+            >
+              <StyledButton>
+                <span>GitHub</span>
+              </StyledButton>
+            </a>
+            <h5>Tech stack:</h5>
+            <ul>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>Lighthouse</li>
+              <li>GraphQL</li>
+              <li>Firestore</li>
+              <li>Firebase</li>
             </ul>
           </StyledTypography>
         </StyledExpansionPanelDetails>
