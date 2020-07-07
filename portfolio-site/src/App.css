@@ -1,5 +1,8 @@
+html,
 body {
   margin: 0;
+  height: 100%;
+  background-color: black;
 }
 .menu-links {
   padding: 20px;
@@ -12,7 +15,7 @@ body {
   transition: all 150ms ease-in-out;
 }
 .github:hover {
-  color: #94618e;
+  color: #36454f;
 }
 .linkedin {
   padding: 10px;
@@ -22,7 +25,7 @@ body {
   transition: all 150ms ease-in-out;
 }
 .linkedin:hover {
-  color: #94618e;
+  color: #36454f;
 }
 
 .menu-icon {
@@ -30,7 +33,7 @@ body {
   transition: all 150ms ease-in-out;
 }
 .menu-icon:hover {
-  color: #94618e;
+  color: #36454f;
 }
 
 .nav-links {
@@ -74,4 +77,58 @@ p {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+/*Console loading animation*/
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+.load {
+  margin: 0 auto;
+  min-height: 100%;
+  width: 100%;
+  background: black;
+}
+
+.term {
+  font-family: monospace;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 2em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.term:after {
+  content: "_";
+  opacity: 1;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.portfolio-art {
+  max-width: 30rem;
+  max-height: 30rem;
 }
