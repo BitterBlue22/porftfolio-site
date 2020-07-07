@@ -1,15 +1,28 @@
 import React from "react";
-import { styled, Button } from "@material-ui/core";
+import ImgMediaCard from "./re-useable/Card";
+import { Grid } from "@material-ui/core";
 
-const StyledButton = styled(Button)({});
 const Home = () => {
+  const codingProjects = {
+    image:
+      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/code.jpg?raw=true",
+    description: "See some of my coding projects",
+    title: "Coding Projects",
+    link: "/projects",
+  };
+  const artProjects = {
+    image:
+      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/BOT.jpg?raw=true",
+    description: "See some of my art projects",
+    title: "Art Projects",
+    link: "/art",
+  };
+
   return (
-    <section className="home">
-      <h2>Welcome!</h2>
-      <h3>
-        Site currently under construction, but feel free to have a look around.
-      </h3>
-    </section>
+    <Grid container justify="space-around" alignContent="center">
+      <ImgMediaCard data={codingProjects} />
+      <ImgMediaCard data={artProjects} />
+    </Grid>
   );
 };
 

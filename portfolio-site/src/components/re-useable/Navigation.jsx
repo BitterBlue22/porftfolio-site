@@ -25,13 +25,14 @@ import Home from "../Home";
 import AboutMe from "../AboutMe";
 import Projects from "../Projects";
 import ContactMe from "../ContactMe";
+import Art from "../Art";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    backgroundColor: "#FFFFFF",
+    background: "radial-gradient(	#101518, #0b0e10)",
     width: "100%",
     height: "100%",
     position: "fixed",
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: "#49274A",
+    backgroundColor: "#20292f",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -55,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    backgroundColor: "#36454f",
   },
   hide: {
     display: "none",
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
     border: "none",
-    backgroundColor: "#94618E",
+    backgroundColor: "#263037",
   },
   drawerHeader: {
     display: "flex",
@@ -175,6 +177,15 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="Projects" />
             </ListItem>
           </Link>
+
+          <Link to="art" className="link">
+            <ListItem button key="art" className="nav-links">
+              <ListItemIcon>
+                <ContactSupportIcon />
+              </ListItemIcon>
+              <ListItemText primary="Art" />
+            </ListItem>
+          </Link>
           <Link to="about-me" className="link">
             <ListItem button key="about-me" className="nav-links">
               <ListItemIcon>
@@ -205,6 +216,7 @@ export default function PersistentDrawerLeft() {
           <Projects path="/projects" />
           <AboutMe path="/about-me" />
           <ContactMe path="/contact-me" />
+          <Art path="/art" />
         </Router>
       </main>
     </div>
