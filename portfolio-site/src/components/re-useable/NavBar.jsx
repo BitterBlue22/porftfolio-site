@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Home from "../Home";
-import AboutMe from "../AboutMe";
 import Projects from "../Projects";
+import Art from "../Art";
 import ContactMe from "../ContactMe";
 
 function TabPanel(props) {
@@ -17,8 +18,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
+      id={`nav-tabpanel-${index}`}
+      aria-labelledby={`nav-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -38,26 +39,37 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `vertical-tab-${index}`,
-    "aria-controls": `vertical-tabpanel-${index}`,
+    id: `nav-tab-${index}`,
+    "aria-controls": `nav-tabpanel-${index}`,
   };
+}
+
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    display: "flex",
+    background: "radial-gradient(#101518, #0b0e10)",
+    minHeight: "100%",
+    minWidth: "100%",
     position: "fixed",
-    width: "100%",
-    height: "100%",
   },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+  appbar: {
+    backgroundColor: "#161c20",
   },
 }));
 
-export default function VerticalTabs() {
+export default function NavTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -66,32 +78,32 @@ export default function VerticalTabs() {
   };
 
   return (
-    <nav className={classes.root}>
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs"
-        className={classes.tabs}
-      >
-        <Tab label="Home" {...a11yProps(0)} />
-        <Tab label="About Me" {...a11yProps(1)} />
-        <Tab label="Projects" {...a11yProps(2)} />
-        <Tab label="Contact Me" {...a11yProps(3)} />
-      </Tabs>
+    <div className={classes.root}>
+      <AppBar position="static" className={classes.appbar}>
+        <Tabs
+          variant="fullWidth"
+          value={value}
+          onChange={handleChange}
+          aria-label="nav tabs example"
+        >
+          <LinkTab label="Home" href="/" {...a11yProps(0)} />
+          <LinkTab label="Projects" href="/projects" {...a11yProps(1)} />
+          <LinkTab label="Art" href="/art" {...a11yProps(2)} />
+          <LinkTab label="Contact Me" href="/contact-me" {...a11yProps(3)} />
+        </Tabs>
+      </AppBar>
       <TabPanel value={value} index={0}>
         <Home />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <AboutMe />
+        <Projects />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Projects />
+        <Art />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <ContactMe />
       </TabPanel>
-    </nav>
+    </div>
   );
 }
