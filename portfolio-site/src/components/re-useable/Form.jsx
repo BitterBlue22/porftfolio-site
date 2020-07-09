@@ -5,9 +5,7 @@ import { Button, Grid } from "@material-ui/core";
 
 const StyledTextField = styled(TextField)({
   background: "white",
-
   borderRadius: "3px",
-
   boxShadow: "0 3px 5px 2px #49274A",
   color: "white",
   margin: "1ch",
@@ -16,18 +14,24 @@ const StyledTextField = styled(TextField)({
 });
 
 const StyledButton = styled(Button)({
-  background: "#94618E",
+  background: "#36454f",
   border: 0,
   borderRadius: 3,
-  boxShadow: "0 3px 5px 2px #49274A",
+  boxShadow: "0 3px 5px 2px #36454f",
   color: "white",
   height: 48,
   padding: "0 30px",
   margin: "10px",
+  transition: "all 150ms ease-in-out",
+  "&:active": {
+    background: "	#49274A",
+    borderRadius: 3,
+    boxShadow: "0 3px 5px 2px 	#0b0e10",
+  },
   "&:hover": {
     background: "	#49274A",
     borderRadius: 3,
-    boxShadow: "0 3px 5px 2px #94618E",
+    boxShadow: "0 3px 5px 2px 	#0b0e10",
   },
 });
 
@@ -41,14 +45,15 @@ const StyledGrid = styled(Grid)({
 export default function StyledComponents() {
   return (
     <StyledGrid container spacing={1}>
-      <form autoComplete="off" name="contact" data-netlify="true">
+      <form id="contact-form" name="contact" method="post" data-netlify="true">
+        <input type="hidden" name="contact_number" />
         <StyledGrid container item>
           <StyledTextField
             required
             id="outlined-required"
             label="Name"
             variant="outlined"
-            name="name"
+            name="user_name"
             fullWidth
           />
         </StyledGrid>
@@ -59,7 +64,7 @@ export default function StyledComponents() {
             label="Email"
             type="email"
             variant="outlined"
-            name="email"
+            name="user_email"
             fullWidth
           />
         </StyledGrid>
@@ -76,7 +81,12 @@ export default function StyledComponents() {
           />
         </StyledGrid>
         <StyledGrid container item xs={12} spacing={1}>
-          <StyledButton variant="contained" color="primary" type="submit">
+          <StyledButton
+            variant="contained"
+            color="primary"
+            type="submit"
+            value="send"
+          >
             Submit
           </StyledButton>
         </StyledGrid>

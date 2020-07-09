@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 const Home = () => {
   const codingProjects = {
     image:
-      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/code.jpg?raw=true",
+      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/codeOp.jpg?raw=true",
     description: "See some of my coding projects",
     tools: [
       "JavaScript",
@@ -23,7 +23,7 @@ const Home = () => {
   };
   const artProjects = {
     image:
-      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/BOT.jpg?raw=true",
+      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Bot.jpg?raw=true",
     description: "See some of my art projects",
     tools: ["Photoshop", "DazStudio", "Octane Render", "Iray"],
     title: "Art Projects",
@@ -33,7 +33,6 @@ const Home = () => {
   return (
     <Grid container justify="space-around">
       <ImgMediaCard data={codingProjects} />
-
       <ImgMediaCard data={artProjects} />
     </Grid>
   );

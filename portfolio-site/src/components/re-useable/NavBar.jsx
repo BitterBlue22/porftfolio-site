@@ -1,15 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import {
+  Tabs,
+  Tab,
+  Box,
+  makeStyles,
+  AppBar,
+  Menu,
+  MenuItem,
+  Button,
+} from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Home from "../Home";
 import Projects from "../Projects";
 import Art from "../Art";
 import ContactMe from "../ContactMe";
+import { Link } from "@reach/router";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -22,11 +29,7 @@ function TabPanel(props) {
       aria-labelledby={`nav-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box p={3}>{children}</Box>}
     </div>
   );
 }
@@ -44,39 +47,55 @@ function a11yProps(index) {
   };
 }
 
-function LinkTab(props) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
-}
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     background: "radial-gradient(#101518, #0b0e10)",
     minHeight: "100%",
     minWidth: "100%",
-    position: "fixed",
   },
   appbar: {
     backgroundColor: "#161c20",
+    overflow: "hidden",
+    maxWidth: "100%",
+  },
+  tabpanel: {
+    background: "radial-gradient(#101518, #0b0e10)",
+    minHeight: "100%",
+    minWidth: "100%",
+    position: "absolute",
+    overflow: "scroll",
+  },
+  contacttab: {
+    backgroundColor: "#161c20",
+    maxWidth: "20%",
+    "&:active": {
+      background: "	#36454f",
+      borderRadius: 3,
+      boxShadow: "0 3px 5px 2px 	#0b0e10",
+    },
+    "&:hover": {
+      background: "	#36454f",
+      borderRadius: 3,
+      boxShadow: "0 3px 5px 2px 	#0b0e10",
+    },
   },
 }));
 
 export default function NavTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
+  const [anchorEl, setAnchorEl] = React.useState(null);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appbar}>
@@ -84,24 +103,72 @@ export default function NavTabs() {
           variant="fullWidth"
           value={value}
           onChange={handleChange}
-          aria-label="nav tabs example"
+          aria-label="nav tabs"
         >
-          <LinkTab label="Home" href="/" {...a11yProps(0)} />
-          <LinkTab label="Projects" href="/projects" {...a11yProps(1)} />
-          <LinkTab label="Art" href="/art" {...a11yProps(2)} />
-          <LinkTab label="Contact Me" href="/contact-me" {...a11yProps(3)} />
+          <Tab label="Home" {...a11yProps(0)} to="/" component={Link} />
+
+          <Tab
+            label="Projects"
+            href="/projects"
+            {...a11yProps(1)}
+            to="/projects"
+            component={Link}
+          />
+
+          <Tab
+            label="Art"
+            href="/art"
+            {...a11yProps(2)}
+            to="/art"
+            component={Link}
+          />
+
+          <Button
+            aria-controls="customized-menu"
+            aria-haspopup="true"
+            variant="contained"
+            color="primary"
+            onClick={handleClick}
+            className={classes.contacttab}
+          >
+            Contact Me
+          </Button>
+          <Menu
+            id="contact-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <a href="https://github.com/BitterBlue22" className="link">
+              <MenuItem onClick={handleClose}>
+                <GitHubIcon className="github" />
+                Github
+              </MenuItem>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/telisa-du-plessis-7b1284150/"
+              className="link"
+            >
+              <MenuItem onClick={handleClose}>
+                <LinkedInIcon className="linkedin" />
+                LinkedIn
+              </MenuItem>
+            </a>
+          </Menu>
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
+
+      <TabPanel className={classes.tabpanel} value={value} index={0}>
         <Home />
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel className={classes.tabpanel} value={value} index={1}>
         <Projects />
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel className={classes.tabpanel} value={value} index={2}>
         <Art />
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel className={classes.tabpanel} value={value} index={3}>
         <ContactMe />
       </TabPanel>
     </div>

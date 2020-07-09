@@ -1,66 +1,64 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
 import { Link } from "@reach/router";
+import Tag from "./Tag";
+import {
+  Box,
+  CardMedia,
+  CardContent,
+  CardActionArea,
+  makeStyles,
+  Card,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: "50%",
-    backgroundColor: "#313e47",
+    backgroundColor: "#263037",
   },
   media: {
     maxHeight: "40rem",
-    maxWidth: "100%",
+    minHeight: "30rem",
+    maxWidth: "40rem",
+    minWidth: "30rem",
   },
-  content: { backgroundColor: "#263037" },
-  button: { backgroundColor: "#313e47" },
   title: { color: "whitesmoke", fontSize: "x-large", fontFamily: "Mansalva" },
   text: { color: "whitesmoke", fontFamily: "Architects Daughter" },
-  expand: {
-    transform: "rotate(0deg)",
-    maxWidth: "50%",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transition: "all .3s ease-in",
-    opacity: 1,
-    transform: "scale(1.15)",
+  box: {
+    margin: "1px",
+    marginTop: "1rem",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: "35rem",
   },
 }));
 
 export default function ImgMediaCard({
-  data: { image, title, description, link },
+  data: { image, title, description, link, tools },
 }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <Link to={link} className="link">
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            alt={title}
-            image={image}
-            title={title}
-            className={classes.media}
-          />
-          <CardContent className={classes.content}>
-            <Typography className={classes.title} component="h2">
-              {title}
-            </Typography>
-            <Typography className={classes.text} component="p">
-              {description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Link>
+      <CardActionArea to={link} component={Link}>
+        <CardMedia
+          component="img"
+          alt={title}
+          image={image}
+          title={title}
+          className={classes.media}
+        />
+        <CardContent className={classes.content}>
+          <span className={classes.title}>{title}</span>
+          <br />
+          <span className={classes.text}>{description}</span>
+          <Box className={classes.box}>
+            {tools.map((tool) => {
+              return <Tag>{tool}</Tag>;
+            })}
+          </Box>
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

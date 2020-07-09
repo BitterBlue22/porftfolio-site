@@ -1,15 +1,13 @@
 html,
 body {
   margin: 0;
-  height: 100%;
-  background-color: black;
 }
 .menu-links {
   padding: 20px;
 }
 .github {
-  padding: 10px;
-  color: white;
+  margin-right: 0.5rem;
+  color: #0b0e10;
   text-decoration: none;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
@@ -18,8 +16,8 @@ body {
   color: #36454f;
 }
 .linkedin {
-  padding: 10px;
-  color: white;
+  margin-right: 0.5rem;
+  color: #0b0e10;
   text-decoration: none;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
@@ -59,6 +57,7 @@ body {
 h2 {
   font-family: "Mansalva", cursive;
   font-size: x-large;
+  color: whitesmoke;
 }
 
 .list-item-text {
@@ -79,56 +78,7 @@ p {
   align-items: center;
 }
 
-/*Console loading animation*/
-
-pre {
-  padding: 0;
-  margin: 0;
-}
-
-.load {
-  margin: 0 auto;
-  min-height: 100%;
-  width: 100%;
-  background: black;
-}
-
-.term {
-  font-family: monospace;
-  color: #fff;
-  opacity: 0.8;
-  font-size: 2em;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-top: 10px;
-  padding-left: 20px;
-}
-
-.term:after {
-  content: "_";
-  opacity: 1;
-  animation: cursor 1s infinite;
-}
-
-@keyframes cursor {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.portfolio-art {
+.art-image {
   max-width: 30rem;
   max-height: 30rem;
 }
