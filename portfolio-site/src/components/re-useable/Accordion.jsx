@@ -188,68 +188,6 @@ export default function StyledComponents() {
           </StyledTypography>
         </StyledExpansionPanelDetails>
       </StyledExpansionPanel>
-      <StyledExpansionPanel>
-        <StyledExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <h2>Bookmark</h2>
-        </StyledExpansionPanelSummary>
-        <StyledExpansionPanelDetails>
-          <StyledTypography>
-            *In progress*
-            <h4>Frontend:</h4>
-            {/* <a href="" className="link">
-              <StyledButton>
-                <span>Hosted</span>
-              </StyledButton>
-            </a> */}
-            <a
-              href="https://github.com/p-stanescu/Bookmark-FE"
-              className="link"
-            >
-              <StyledButton>
-                <span>GitHub</span>
-              </StyledButton>
-            </a>
-            <h5>Tech stack:</h5>
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML5/CSS3</li>
-              <li>React</li>
-              <li>GraphQL (and Apollo)</li>
-              <li>MaterialUI</li>
-            </ul>
-            <h4>Backend:</h4>
-            {/* <a
-              href=""
-              className="link"
-            >
-              <StyledButton>
-                <span>Hosted</span>
-              </StyledButton>
-            </a> */}
-            <a
-              href="https://github.com/BitterBlue22/bookmark-be"
-              className="link"
-            >
-              <StyledButton>
-                <span>GitHub</span>
-              </StyledButton>
-            </a>
-            <h5>Tech stack:</h5>
-            <ul>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>Lighthouse</li>
-              <li>GraphQL</li>
-              <li>Firestore</li>
-              <li>Firebase</li>
-            </ul>
-          </StyledTypography>
-        </StyledExpansionPanelDetails>
-      </StyledExpansionPanel>
     </section>
   );
 }

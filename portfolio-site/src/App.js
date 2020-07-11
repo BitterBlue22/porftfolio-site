@@ -8,14 +8,12 @@ import Projects from "./components/Projects";
 import Art from "./components/Art";
 import Home from "./components/Home";
 import { Box, makeStyles } from "@material-ui/core";
+import ErrorDIsplayer from "./components/re-useable/ErrorDIsplayer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    background: "radial-gradient(#101518, #0b0e10)",
-    minHeight: "100%",
-    height: "100%",
-    minWidth: "100%",
+    backgroundColor: "transparent",
   },
 }));
 
@@ -31,8 +29,9 @@ function App() {
             <Home path="/" />
             <Projects path="/projects" />
             <Art path="/art" />
+            <ErrorDIsplayer default />
           </Router>
-        </PerfectScrollbar>{" "}
+        </PerfectScrollbar>
       </Box>
     </>
   );
