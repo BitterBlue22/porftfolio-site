@@ -1,6 +1,10 @@
+@import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
+
 html,
 body {
   margin: 0;
+  background: radial-gradient(#101518, #0b0e10);
+  min-height: 100%;
 }
 .menu-links {
   padding: 20px;

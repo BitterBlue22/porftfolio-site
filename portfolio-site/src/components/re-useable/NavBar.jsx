@@ -1,9 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {
   Tabs,
   Tab,
-  Box,
   makeStyles,
   AppBar,
   Menu,
@@ -12,33 +10,7 @@ import {
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import Home from "../Home";
-import Projects from "../Projects";
-import Art from "../Art";
-import ContactMe from "../ContactMe";
 import { Link } from "@reach/router";
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`nav-tabpanel-${index}`}
-      aria-labelledby={`nav-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box p={3}>{children}</Box>}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
 
 function a11yProps(index) {
   return {
@@ -59,16 +31,10 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     maxWidth: "100%",
   },
-  tabpanel: {
-    background: "radial-gradient(#101518, #0b0e10)",
-    minHeight: "100%",
-    minWidth: "100%",
-    position: "absolute",
-    overflow: "scroll",
-  },
+
   contacttab: {
     backgroundColor: "#161c20",
-    maxWidth: "20%",
+    maxWidth: "10rem",
     "&:active": {
       background: "	#36454f",
       borderRadius: 3,
@@ -158,19 +124,6 @@ export default function NavTabs() {
           </Menu>
         </Tabs>
       </AppBar>
-
-      <TabPanel className={classes.tabpanel} value={value} index={0}>
-        <Home />
-      </TabPanel>
-      <TabPanel className={classes.tabpanel} value={value} index={1}>
-        <Projects />
-      </TabPanel>
-      <TabPanel className={classes.tabpanel} value={value} index={2}>
-        <Art />
-      </TabPanel>
-      <TabPanel className={classes.tabpanel} value={value} index={3}>
-        <ContactMe />
-      </TabPanel>
     </div>
   );
 }
