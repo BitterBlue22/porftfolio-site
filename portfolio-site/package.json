@@ -12,6 +12,8 @@
     "mdbreact": "^4.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-image-gallery": "^1.0.7",
+    "react-perfect-scrollbar": "^1.5.8",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1"
   },
