@@ -64,7 +64,7 @@ export default function NavTabs() {
   };
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.appbar}>
+      <AppBar position="sticky" className={classes.appbar}>
         <Tabs
           variant="fullWidth"
           value={value}
