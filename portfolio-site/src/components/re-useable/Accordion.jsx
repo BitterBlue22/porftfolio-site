@@ -69,7 +69,7 @@ export default function StyledComponents() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <h2>Chicken Tinder</h2>
+          <span className="projects">Chicken Tinder</span>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
           <StyledTypography>
@@ -134,7 +134,7 @@ export default function StyledComponents() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <h2>Read all about it!</h2>
+          <span className="projects">Read all about it!</span>
         </StyledExpansionPanelSummary>
         <StyledExpansionPanelDetails>
           <StyledTypography>
