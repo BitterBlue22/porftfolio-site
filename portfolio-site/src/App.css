@@ -59,7 +59,7 @@ body {
 }
 
 h2 {
-  font-family: "Mansalva", cursive;
+  font-family: "Architects Daughter", bold;
   font-size: x-large;
   color: whitesmoke;
 }
@@ -85,4 +85,29 @@ p {
 .art-image {
   max-width: 30rem;
   max-height: 30rem;
+}
+
+.typical {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15%;
+  text-align: center;
+}
+
+.top-text {
+  font-size: xx-large;
+  margin-top: 2rem;
+}
+
+.bottom-text {
+  font-size: large;
+  margin: 1rem;
+}
+.projects {
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
+  color: whitesmoke;
 }

@@ -1,40 +1,30 @@
 import React from "react";
-import ImgMediaCard from "./re-useable/Card";
-import { Grid } from "@material-ui/core";
+import Typical from "react-typical";
 
 const Home = () => {
-  const codingProjects = {
-    image:
-      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/codeOp.jpg?raw=true",
-    description: "See some of my coding projects",
-    tools: [
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "React.js",
-      "Material-UI",
-      "SASS",
-      "Styled Components",
-      "PSQL",
-      "Git/Github",
-    ],
-    title: "Coding Projects",
-    link: "/projects",
-  };
-  const artProjects = {
-    image:
-      "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Bot.jpg?raw=true",
-    description: "See some of my art projects",
-    tools: ["Photoshop", "DazStudio", "Octane Render", "Iray"],
-    title: "Art Projects",
-    link: "/art",
-  };
-
   return (
-    <Grid container justify="space-around">
-      <ImgMediaCard data={codingProjects} />
-      <ImgMediaCard data={artProjects} />
-    </Grid>
+    <article className="typical">
+      <Typical
+        steps={["Hello!", 1000, "Welcome to my site."]}
+        loop={1}
+        className="top-text"
+      />
+
+      <Typical steps={[500, "｡^‿^｡"]} loop={1} className="bottom-text" />
+
+      <Typical
+        steps={[
+          2700,
+          "Feel free to have a look around.",
+          2000,
+          "Projects will be updated as I finish them!",
+          500,
+        ]}
+        loop={Infinity}
+        wrapper="p"
+        className="bottom-text"
+      />
+    </article>
   );
 };
 

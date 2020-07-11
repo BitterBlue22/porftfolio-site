@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "@reach/router";
 
 function a11yProps(index) {
@@ -34,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
 
   contacttab: {
     backgroundColor: "#161c20",
-    maxWidth: "10rem",
+    maxWidth: "10%",
+    overflow: "wrap",
     "&:active": {
       background: "	#36454f",
       borderRadius: 3,
@@ -72,7 +74,6 @@ export default function NavTabs() {
           aria-label="nav tabs"
         >
           <Tab label="Home" {...a11yProps(0)} to="/" component={Link} />
-
           <Tab
             label="Projects"
             href="/projects"
@@ -80,7 +81,6 @@ export default function NavTabs() {
             to="/projects"
             component={Link}
           />
-
           <Tab
             label="Art"
             href="/art"
@@ -88,7 +88,6 @@ export default function NavTabs() {
             to="/art"
             component={Link}
           />
-
           <Button
             aria-controls="customized-menu"
             aria-haspopup="true"
@@ -97,7 +96,7 @@ export default function NavTabs() {
             onClick={handleClick}
             className={classes.contacttab}
           >
-            Contact Me
+            <MenuIcon />
           </Button>
           <Menu
             id="contact-menu"
