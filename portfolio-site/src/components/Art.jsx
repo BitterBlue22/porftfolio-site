@@ -12,13 +12,6 @@ class Art extends Component {
       },
       {
         original:
-          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/stampede1000.jpg?raw=true",
-        thumbnail:
-          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/stampede.jpg?raw=true",
-      },
-
-      {
-        original:
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/fantasy1000.jpg?raw=true",
         thumbnail:
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Softened.jpg?raw=true",
@@ -31,22 +24,11 @@ class Art extends Component {
       },
       {
         original:
-          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/fire1000.jpg?raw=true",
-        thumbnail:
-          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Fire.jpg?raw=true",
-      },
-      {
-        original:
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/Scifi1000.jpg?raw=true",
         thumbnail:
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Scifi.jpg?raw=true",
       },
-      {
-        original:
-          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/Error.jpg?raw=true",
-        thumbnail:
-          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Error.jpg?raw=true",
-      },
+
       {
         original:
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/BowDress.jpg?raw=true",
@@ -58,6 +40,24 @@ class Art extends Component {
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/k1000.jpg?raw=true",
         thumbnail:
           "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/K.jpg?raw=true",
+      },
+      {
+        original:
+          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/stampede1000.jpg?raw=true",
+        thumbnail:
+          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/stampede.jpg?raw=true",
+      },
+      {
+        original:
+          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/Error.jpg?raw=true",
+        thumbnail:
+          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Error.jpg?raw=true",
+      },
+      {
+        original:
+          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/1000/fire1000.jpg?raw=true",
+        thumbnail:
+          "https://github.com/BitterBlue22/portfolio-site/blob/master/portfolio-site/public/images/Fire.jpg?raw=true",
       },
     ];
 
